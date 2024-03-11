@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --blue: #3359f8;
+    --winning-blocks: #bd93f6;
+}
+body {
+    color: var(--blue);
+    font-family: 'Finger Paint', cursive;
+    background-attachment: fixed;
+}
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+/*esto es para el index*/
+.text{
+    font-size: 80px;
+    text-align: center;
+    margin: 30px;
+    color: var(--blue);
+}
+#nombreUser, #nombreInput {
+    border: 2px solid;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 300px;
+    padding: 8px;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Finger Paint', cursive;
+    color: var(--blue);
+}
+/*esto es para el juego por la lista del localStorage*/
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px; 
+    width: 60%;
+    text-align: center;
+}
+.sidebar {
+    flex-grow: 1; 
+    width: 35%;
+}
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#playerList {
+    list-style: none;
+    padding: 0;
+}
+
+#playerList li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+/*Esto es para juego*/
+.container {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #bbccfa;
+}
+.contenedor {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #bbccfa;
+}
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 30px 0;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: #333;
+    border-color: var(--blue);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+    margin-top: 40px;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
